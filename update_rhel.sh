@@ -8,9 +8,6 @@ echo "Box is already CentOS"
 exit
 fi
 
-
-
-exit 
 RELEASE=$1
 AUTOREBOOT="false"
 MIRROR="mirror.centos.org"
