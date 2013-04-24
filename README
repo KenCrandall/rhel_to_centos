@@ -1,0 +1,23 @@
+A simple script to convert a rhel box to a centos box
+This has not been extensively tested. I created 2 rhel boxes (5,6) and ran this script multiple times
+and it worked for me. It MAY not work for you (who knows what crazy setup you have).
+PLEASE test this before using it on ANY production boxes. In fact, I cannot endorse it, use at your own risk!
+PLEASE READ THE FAQ BELOW!!!!
+
+Only RHEL 5 and 6 are supported, not minor releases
+pass it the version you are changing to
+e.x convert.sh 5 would convert a rhel 5 box to a centos 5 box
+change the mirror to a mirror that has all minor releases if you want minor versions to work
+Change the MIRROR variable in the script to a different mirror if you do not like mirror.centos.org
+
+FAQ:
+why not language X instead of bash:
+* It was super quick to write this, and why complicate things. 
+
+Why can I not go from rhel 6.1 to centos 6.1? Why does it force me to Centos  (latest)?
+* By default, when there is a new minor release (say CentOS 6.3 to 6.4), the packages for 6.3
+are essentially deleted in the mirror (no more updages) and you are automatically upgraded to the 6.4 (in this example)
+If the current latest version is 6.4 and you are running RHEL 6.1, to go to Centos 6.1 you would need a mirror that has
+all of 6.1 packages mirrored. Otherwise if you use this script and you are running RHEL 6.1 and you do convert.sh 6, you WILL
+BE UPGRADED TO THE LATEST VERSION OF CENTOS. 
+
