@@ -8,7 +8,6 @@ echo "Box is already CentOS"
 exit
 fi
 
-CURVER=`head -n 1 /etc/issue | awk '{print $3}i'`
 
 
 exit 
